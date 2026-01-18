@@ -23,7 +23,6 @@ Students <- Students %>%
     class_8 = rowSums(select(.,c8_b:c8_g),na.rm = TRUE),
     class_10 = rowSums(select(.,c10_b:c10_g),na.rm = TRUE),
     class_12 = rowSums(select(., c12_b:c12_g)),na.rm = TRUE)
-View(Students)
 
 State_2 <- State %>% select(pseudocode,state,school_category, managment)
 View(State_2)
@@ -1993,6 +1992,7 @@ Combined_class12 <- list(
   "Combined_class12_Pri_Unaided" = private_unaided_c12_final,
   "Combined_class12_Overall" = overall_c12_final
 )
+
 
 
 
