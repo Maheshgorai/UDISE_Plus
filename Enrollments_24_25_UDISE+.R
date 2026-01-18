@@ -1963,40 +1963,6 @@ View(overall_c12_final)
 
 # CLASS ========================================================================
 
-Class1 <- list(
-  "Class1_Gov" = gov_summary_by_state_c1,
-  "Class1_Gov_Aided" = gov_aided_summary_by_state_c1,
-  "Class1_Private_Unaided" = private_unaided_summary_by_state_c1,
-  "Class1_Overall" = overall_summary_by_state_c1
-)
-
-Class5 <- list(
-  "Class5_Gov" = gov_summary_by_state_c5,
-  "Class5_Gov_Aided" = gov_aided_summary_by_state_c5,
-  "Class5_Private_Unaided" = private_unaided_summary_by_state_c5,
-  "Class5_Overall" = overall_summary_by_state_c5
-)
-
-Class8 <- list(
-  "Class8_Gov" = gov_summary_by_state_c8,
-  "Class8_Gov_Aided" = gov_aided_summary_by_state_c8,
-  "Class8_Private_Unaided" = private_unaided_summary_by_state_c8,
-  "Class8_Overall" = overall_summary_by_state_c8
-)
-
-Class10 <- list(
-  "Class10_Gov" = gov_summary_by_state_c10,
-  "Class10_Gov_Aided" = gov_aided_summary_by_state_c10,
-  "Class10_Private_Unaided" = private_unaided_summary_by_state_c10,
-  "Class10_Overall" = overall_summary_by_state_c10
-)
-
-Class12 <- list(
-  "Class12_Gov" = gov_summary_by_state_c12,
-  "Class12_Gov_Aided" = gov_aided_summary_by_state_c12,
-  "Class12_Private_Unaided" = private_unaided_summary_by_state_c12,
-  "Class12_Overall" = overall_summary_by_state_c12
-)
 
 Combined_class1 <- list(
   "Combined_class1_Gov" = gov_c1_final,
@@ -2034,15 +2000,3 @@ Combined_class12 <- list(
 )
 
 
-setwd("D:/UDISE+/R")
-write_xlsx(Class1, "Class_1_enrollment_24_25.xlsx")
-write_xlsx(Class5, "Class_5_enrollment_24_25.xlsx")
-write_xlsx(Class8, "Class_8_enrollment_24_25.xlsx")
-write_xlsx(Class10, "Class_10_enrollment_24_25.xlsx")
-write_xlsx(Class12, "Class_12_enrollment_24_25.xlsx")
-
-write_xlsx(Combined_class1, "Combined_Class_1_enrollment_24_25.xlsx")
-write_xlsx(Combined_class5, "Combined_Class_5_enrollment_24_25.xlsx")
-write_xlsx(Combined_class8, "Combined_Class_8_enrollment_24_25.xlsx")
-write_xlsx(Combined_class10, "Combined_Class_10_enrollment_24_25.xlsx")
-write_xlsx(Combined_class12, "Combined_Class_12_enrollment_24_25.xlsx")
