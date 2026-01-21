@@ -5,6 +5,7 @@ library(writexl)
 State <- read_csv("D:/Users/Downloads/profile_data_1_All State_2024-25 (1)/100_prof1.csv")
 Students <- read_csv("D:/Users/Downloads/enrolment_data_2_All State_2024-25/100_enr2.csv")
 
+
 Students <- Students %>%
   group_by(pseudocode) %>%
   summarise( 
@@ -105,7 +106,7 @@ gov_summary_by_state_c1 <- State_students_gov_c1 %>%
   ) %>%
   complete(
     state,
-    nesting(school_category, school_category_label),   # To keep all the sch_category even if there are no sch 
+    nesting(school_category, school_category_label),   
     fill = list(
       total_schools            = 0L,
       total_enrollment_class_10 = 0L,
@@ -125,7 +126,7 @@ View(gov_summary_by_state_c1)
 
 gov_c1_final <- bind_rows(gov_c1_india, gov_summary_by_state_c1) %>%
   arrange(
-    if_else(state == "INDIA", 0L, 1L),   # 0 before 1 → INDIA first
+    if_else(state == "INDIA", 0L, 1L),   
     state,
     school_category_label
   )
@@ -201,7 +202,7 @@ gov_aided_summary_by_state_c1 <- State_students_gov_aided_c1 %>%
   ) %>%
   complete(
     state,
-    nesting(school_category, school_category_label),   # To keep all the sch_category even if there are no sch 
+    nesting(school_category, school_category_label),    
     fill = list(
       total_schools            = 0L,
       total_enrollment_class_10 = 0L,
@@ -221,7 +222,7 @@ View(gov_aided_summary_by_state_c1)
 
 gov_aided_c1_final <- bind_rows(gov_aided_c1_india, gov_aided_summary_by_state_c1) %>%
   arrange(
-    if_else(state == "INDIA", 0L, 1L),   # 0 before 1 → INDIA first
+    if_else(state == "INDIA", 0L, 1L),   
     state,
     school_category_label
   )
@@ -298,7 +299,7 @@ private_unaided_summary_by_state_c1 <- State_students_private_unaided_c1 %>%
   ) %>%
   complete(
     state,
-    nesting(school_category, school_category_label),   # To keep all the sch_category even if there are no sch 
+    nesting(school_category, school_category_label),   
     fill = list(
       total_schools            = 0L,
       total_enrollment_class_10 = 0L,
@@ -318,7 +319,7 @@ View(private_unaided_summary_by_state_c1)
 
 private_unaided_c1_final <- bind_rows(private_unaided_c1_india, private_unaided_summary_by_state_c1) %>%
   arrange(
-    if_else(state == "INDIA", 0L, 1L),   # 0 before 1 → INDIA first
+    if_else(state == "INDIA", 0L, 1L),   
     state,
     school_category_label
   )
@@ -392,7 +393,7 @@ overall_summary_by_state_c1 <- State_students_overall_c1 %>%
   ) %>%
   complete(
     state,
-    nesting(school_category, school_category_label),   # To keep all the sch_category even if there are no sch 
+    nesting(school_category, school_category_label),   
     fill = list(
       total_schools            = 0L,
       total_enrollment_class_10 = 0L,
@@ -412,7 +413,7 @@ View(overall_summary_by_state_c1)
 
 overall_c1_final <- bind_rows(overall_c1_india, overall_summary_by_state_c1) %>%
   arrange(
-    if_else(state == "INDIA", 0L, 1L),   # 0 before 1 → INDIA first
+    if_else(state == "INDIA", 0L, 1L),   
     state,
     school_category_label
   )
@@ -489,7 +490,7 @@ gov_summary_by_state_c5 <- State_students_gov_c5 %>%
   ) %>%
   complete(
     state,
-    nesting(school_category, school_category_label),   # To keep all the sch_category even if there are no sch 
+    nesting(school_category, school_category_label),   
     fill = list(
       total_schools            = 0L,
       total_enrollment_class_10 = 0L,
@@ -585,7 +586,7 @@ gov_aided_summary_by_state_c5 <- State_students_gov_aided_c5 %>%
   ) %>%
   complete(
     state,
-    nesting(school_category, school_category_label),   # To keep all the sch_category even if there are no sch 
+    nesting(school_category, school_category_label),   
     fill = list(
       total_schools            = 0L,
       total_enrollment_class_10 = 0L,
@@ -682,7 +683,7 @@ private_unaided_summary_by_state_c5 <- State_students_private_unaided_c5 %>%
   ) %>%
   complete(
     state,
-    nesting(school_category, school_category_label),   # To keep all the sch_category even if there are no sch 
+    nesting(school_category, school_category_label),   
     fill = list(
       total_schools            = 0L,
       total_enrollment_class_10 = 0L,
@@ -702,7 +703,7 @@ View(private_unaided_summary_by_state_c5)
 
 private_unaided_c5_final <- bind_rows(private_unaided_c5_india, private_unaided_summary_by_state_c5) %>%
   arrange(
-    if_else(state == "INDIA", 0L, 1L),   # 0 before 1 → INDIA first
+    if_else(state == "INDIA", 0L, 1L),   
     state,
     school_category_label
   )
@@ -776,7 +777,7 @@ overall_summary_by_state_c5 <- State_students_overall_c5 %>%
   ) %>%
   complete(
     state,
-    nesting(school_category, school_category_label),   # To keep all the sch_category even if there are no sch 
+    nesting(school_category, school_category_label),    
     fill = list(
       total_schools            = 0L,
       total_enrollment_class_10 = 0L,
@@ -873,7 +874,7 @@ gov_summary_by_state_c8 <- State_students_gov_c8 %>%
   ) %>%
   complete(
     state,
-    nesting(school_category, school_category_label),   # To keep all the sch_category even if there are no sch 
+    nesting(school_category, school_category_label),   
     fill = list(
       total_schools            = 0L,
       total_enrollment_class_10 = 0L,
@@ -969,7 +970,7 @@ gov_aided_summary_by_state_c8 <- State_students_gov_aided_c8 %>%
   ) %>%
   complete(
     state,
-    nesting(school_category, school_category_label),   # To keep all the sch_category even if there are no sch 
+    nesting(school_category, school_category_label),    
     fill = list(
       total_schools            = 0L,
       total_enrollment_class_10 = 0L,
@@ -989,7 +990,7 @@ View(gov_aided_summary_by_state_c8)
 
 gov_aided_c8_final <- bind_rows(gov_aided_c8_india, gov_aided_summary_by_state_c8) %>%
   arrange(
-    if_else(state == "INDIA", 0L, 1L),   # 0 before 1 → INDIA first
+    if_else(state == "INDIA", 0L, 1L),   
     state,
     school_category_label
   )
@@ -1066,7 +1067,7 @@ private_unaided_summary_by_state_c8 <- State_students_private_unaided_c8 %>%
   ) %>%
   complete(
     state,
-    nesting(school_category, school_category_label),   # To keep all the sch_category even if there are no sch 
+    nesting(school_category, school_category_label),   
     fill = list(
       total_schools            = 0L,
       total_enrollment_class_10 = 0L,
@@ -1086,7 +1087,7 @@ View(private_unaided_summary_by_state_c8)
 
 private_unaided_c8_final <- bind_rows(private_unaided_c8_india, private_unaided_summary_by_state_c8) %>%
   arrange(
-    if_else(state == "INDIA", 0L, 1L),   # 0 before 1 → INDIA first
+    if_else(state == "INDIA", 0L, 1L),   
     state,
     school_category_label
   )
@@ -1160,7 +1161,7 @@ overall_summary_by_state_c8 <- State_students_overall_c8 %>%
   ) %>%
   complete(
     state,
-    nesting(school_category, school_category_label),   # To keep all the sch_category even if there are no sch 
+    nesting(school_category, school_category_label),    
     fill = list(
       total_schools            = 0L,
       total_enrollment_class_10 = 0L,
@@ -1180,7 +1181,7 @@ View(overall_summary_by_state_c8)
 
 overall_c8_final <- bind_rows(overall_c8_india, overall_summary_by_state_c8) %>%
   arrange(
-    if_else(state == "INDIA", 0L, 1L),   # 0 before 1 → INDIA first
+    if_else(state == "INDIA", 0L, 1L),   
     state,
     school_category_label
   )
@@ -1258,7 +1259,7 @@ gov_summary_by_state_c10 <- State_students_gov_c10 %>%
   ) %>%
   complete(
     state,
-    nesting(school_category, school_category_label),   # To keep all the sch_category even if there are no sch 
+    nesting(school_category, school_category_label),   
     fill = list(
       total_schools            = 0L,
       total_enrollment_class_10 = 0L,
@@ -1354,7 +1355,7 @@ gov_aided_summary_by_state_c10 <- State_students_gov_aided_c10 %>%
   ) %>%
   complete(
     state,
-    nesting(school_category, school_category_label),   # To keep all the sch_category even if there are no sch 
+    nesting(school_category, school_category_label),   
     fill = list(
       total_schools            = 0L,
       total_enrollment_class_10 = 0L,
@@ -1374,7 +1375,7 @@ View(gov_aided_summary_by_state_c10)
 
 gov_aided_c10_final <- bind_rows(gov_aided_c10_india, gov_aided_summary_by_state_c10) %>%
   arrange(
-    if_else(state == "INDIA", 0L, 1L),   # 0 before 1 → INDIA first
+    if_else(state == "INDIA", 0L, 1L),   
     state,
     school_category_label
   )
@@ -1450,7 +1451,7 @@ private_unaided_summary_by_state_c10 <- State_students_private_unaided_c10 %>%
   ) %>%
   complete(
     state,
-    nesting(school_category, school_category_label),   # To keep all the sch_category even if there are no sch 
+    nesting(school_category, school_category_label),    
     fill = list(
       total_schools            = 0L,
       total_enrollment_class_10 = 0L,
@@ -1470,7 +1471,7 @@ View(private_unaided_summary_by_state_c10)
 
 private_unaided_c10_final <- bind_rows(private_unaided_c10_india, private_unaided_summary_by_state_c10) %>%
   arrange(
-    if_else(state == "INDIA", 0L, 1L),   # 0 before 1 → INDIA first
+    if_else(state == "INDIA", 0L, 1L),   
     state,
     school_category_label
   )
@@ -1544,7 +1545,7 @@ overall_summary_by_state_c10 <- State_students_overall_c10 %>%
   ) %>%
   complete(
     state,
-    nesting(school_category, school_category_label),   # To keep all the sch_category even if there are no sch 
+    nesting(school_category, school_category_label),   
     fill = list(
       total_schools            = 0L,
       total_enrollment_class_10 = 0L,
@@ -1641,7 +1642,7 @@ gov_summary_by_state_c12 <- State_students_gov_c12 %>%
   ) %>%
   complete(
     state,
-    nesting(school_category, school_category_label),   # To keep all the sch_category even if there are no sch 
+    nesting(school_category, school_category_label),   
     fill = list(
       total_schools            = 0L,
       total_enrollment_class_10 = 0L,
@@ -1737,7 +1738,7 @@ gov_aided_summary_by_state_c12 <- State_students_gov_aided_c12 %>%
   ) %>%
   complete(
     state,
-    nesting(school_category, school_category_label),   # To keep all the sch_category even if there are no sch 
+    nesting(school_category, school_category_label),   
     fill = list(
       total_schools            = 0L,
       total_enrollment_class_10 = 0L,
@@ -1834,7 +1835,7 @@ private_unaided_summary_by_state_c12 <- State_students_private_unaided_c12 %>%
   ) %>%
   complete(
     state,
-    nesting(school_category, school_category_label),   # To keep all the sch_category even if there are no sch 
+    nesting(school_category, school_category_label),   
     fill = list(
       total_schools            = 0L,
       total_enrollment_class_10 = 0L,
@@ -1928,7 +1929,7 @@ overall_summary_by_state_c12 <- State_students_overall_c12 %>%
   ) %>%
   complete(
     state,
-    nesting(school_category, school_category_label),   # To keep all the sch_category even if there are no sch 
+    nesting(school_category, school_category_label),  
     fill = list(
       total_schools            = 0L,
       total_enrollment_class_10 = 0L,
@@ -1992,6 +1993,7 @@ Combined_class12 <- list(
   "Combined_class12_Pri_Unaided" = private_unaided_c12_final,
   "Combined_class12_Overall" = overall_c12_final
 )
+
 
 
 
