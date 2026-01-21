@@ -36,7 +36,7 @@ State_Students <- State_2 %>%
   full_join(Students_2, by = "pseudocode")
 View(State_Students)
 
-# GOVERNMENT CLASS 1(INDIA) ====================================================
+# GOVERNMENT CLASS 1(INDIA) =====================================================
 
 gov_c1_india <- State_Students %>%
   filter(
@@ -70,7 +70,7 @@ gov_c1_india <- State_Students %>%
   )
 View(gov_c1_india)
 
-# GOVERNMENT CLASS 1(STATE) ==========================================================
+# GOVERNMENT CLASS 1(STATE) ===========================================================
 
 State_students_gov_c1 <- State_Students %>%
   filter(managment %in% c(1,2,3,6,89,90,91,92,93,94,95,96,101))%>%
@@ -1993,6 +1993,7 @@ Combined_class12 <- list(
   "Combined_class12_Pri_Unaided" = private_unaided_c12_final,
   "Combined_class12_Overall" = overall_c12_final
 )
+
 
 
 
