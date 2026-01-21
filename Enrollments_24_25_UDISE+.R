@@ -167,7 +167,7 @@ gov_aided_c1_india <- State_Students %>%
   )
 View(gov_aided_c1_india)
 
-# GOV AIDED CLASS 1(STATE) ============================================================
+# GOV AIDED CLASS 1(STATE) ===========================================================
 
 State_students_gov_aided_c1 <- State_Students %>%
   filter(managment %in% c(4,7))%>%
@@ -1993,6 +1993,7 @@ Combined_class12 <- list(
   "Combined_class12_Pri_Unaided" = private_unaided_c12_final,
   "Combined_class12_Overall" = overall_c12_final
 )
+
 
 
 
