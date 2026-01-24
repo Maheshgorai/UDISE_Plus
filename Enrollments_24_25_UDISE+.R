@@ -1894,7 +1894,7 @@ overall_c12_india <- State_Students %>%
   )
 View(overall_c12_india)
 
-# OVERALL CLASS 12(STATE) ==============================================================
+# OVERALL CLASS 12(STATE) =============================================================
 
 State_students_overall_c12 <- State_Students %>%
   select(pseudocode,state,school_category,managment,c12_b,c12_g,class_12,total_boys,
@@ -1992,6 +1992,7 @@ Combined_class12 <- list(
   "Combined_class12_Pri_Unaided" = private_unaided_c12_final,
   "Combined_class12_Overall" = overall_c12_final
 )
+
 
 
 
