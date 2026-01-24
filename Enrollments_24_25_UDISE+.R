@@ -11,7 +11,7 @@ Students <- Students %>%
     across(matches("^(cpp|c\\d{1,2})_(b|g)$"),
            ~ sum(.x,na.rm = TRUE)),
     .groups = "drop"
-  )
+  
 
 Students <- Students %>%
   mutate(
@@ -1992,6 +1992,7 @@ Combined_class12 <- list(
   "Combined_class12_Pri_Unaided" = private_unaided_c12_final,
   "Combined_class12_Overall" = overall_c12_final
 )
+
 
 
 
