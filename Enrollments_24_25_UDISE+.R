@@ -1,7 +1,7 @@
 library(dplyr)
 library(readr)
 library(tidyr)
-library(writexl)
+
 State <- read_csv("D:/Users/Downloads/profile_data_1_All State_2024-25 (1)/100_prof1.csv")
 Students <- read_csv("D:/Users/Downloads/enrolment_data_2_All State_2024-25/100_enr2.csv")
 
@@ -1993,6 +1993,7 @@ Combined_class12 <- list(
   "Combined_class12_Pri_Unaided" = private_unaided_c12_final,
   "Combined_class12_Overall" = overall_c12_final
 )
+
 
 
 
