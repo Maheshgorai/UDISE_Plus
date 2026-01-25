@@ -19,7 +19,6 @@ Students_S <- Students_S %>%
 Students_S <- Students_S %>%
   mutate(students_s = rowSums(
     select(., c1_b:c12_g) ,na.rm = TRUE))
-#View(Students_S)
 
 State_S2 <- State_S %>% select(pseudocode,state)
 #View(State_S2)
@@ -53,6 +52,7 @@ View(No_enrolment_S)
 No_enrolment <- No_enrolment %>%
   arrange(desc(Total_Schools))
 #View(No_enrolment)
+
 
 
 
