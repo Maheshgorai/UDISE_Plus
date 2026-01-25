@@ -15,7 +15,6 @@ Students_S <- Students_S %>%
            ~ sum(.x,na.rm = TRUE)),
     .groups = "drop"
   )
-#View(Students)
 
 Students_S <- Students_S %>%
   mutate(students_s = rowSums(
@@ -54,6 +53,7 @@ View(No_enrolment_S)
 No_enrolment <- No_enrolment %>%
   arrange(desc(Total_Schools))
 #View(No_enrolment)
+
 
 
 
