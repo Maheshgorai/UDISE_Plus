@@ -21,7 +21,6 @@ Students_S <- Students_S %>%
     select(., c1_b:c12_g) ,na.rm = TRUE))
 
 State_S2 <- State_S %>% select(pseudocode,state)
-#View(State_S2)
 Students_S2 <- Students_S %>% select(pseudocode,students_s)
 #View(Students_S2)
 Teachers_S2 <- Teachers_S %>% select(pseudocode,total_tch)
@@ -52,6 +51,7 @@ View(No_enrolment_S)
 No_enrolment <- No_enrolment %>%
   arrange(desc(Total_Schools))
 #View(No_enrolment)
+
 
 
 
