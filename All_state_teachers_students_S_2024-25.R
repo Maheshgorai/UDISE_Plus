@@ -7,7 +7,6 @@ Teachers_S <- read_csv("D:/Users/Downloads/teacher_data_All State_2024-25 (1)/10
 
 State_S <- State_S %>%
   arrange(pseudocode)
-#View(State_S)
 
 Students_S <- Students_S %>%
   group_by(pseudocode) %>%
@@ -55,6 +54,7 @@ View(No_enrolment_S)
 No_enrolment <- No_enrolment %>%
   arrange(desc(Total_Schools))
 #View(No_enrolment)
+
 
 
 
