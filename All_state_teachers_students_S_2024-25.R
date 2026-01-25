@@ -50,7 +50,7 @@ View(No_enrolment_S)
 
 No_enrolment <- No_enrolment %>%
   arrange(desc(Total_Schools))
-#View(No_enrolment)
+
 
 
 
