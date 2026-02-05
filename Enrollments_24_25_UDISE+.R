@@ -13,7 +13,7 @@ Students <- Students %>%
     .groups = "drop"
   )
 
-Students <- Students %>%
+Students <- Students 
   mutate(
     total_students = rowSums(select(., cpp_b:c12_g),na.rm = TRUE),
     total_boys = rowSums(select(.,matches("_(b)$")),na.rm = TRUE),
@@ -1992,6 +1992,7 @@ Combined_class12 <- list(
   "Combined_class12_Pri_Unaided" = private_unaided_c12_final,
   "Combined_class12_Overall" = overall_c12_final
 )
+
 
 
 
