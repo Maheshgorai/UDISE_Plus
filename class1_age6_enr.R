@@ -7,9 +7,6 @@ State <- read_csv("D:/*****/*****/profile_data_1_All State_2024-25 (1)/100_prof1
 Students <- read_csv("D:/*****/*****/enrolment_data_2_All State_2024-25/100_enr2.csv")
 
 
-
-View(
-
 Students <-Students%>%
   filter(item_id==6)%>%
   mutate(
@@ -84,6 +81,7 @@ c1_enr <- bind_rows(enr_ind,enr_state)%>%
   select(state,school_category_label,total_sch,total_c1,total_c1_b,total_c1_g)
  
 View(c1_enr)
+
 
 
 
