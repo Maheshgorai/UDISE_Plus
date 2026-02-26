@@ -80,7 +80,8 @@ enr_state <- State_Students%>%
 c1_enr <- bind_rows(enr_ind,enr_state)%>%
   select(state,school_category_label,total_sch,total_c1,total_c1_b,total_c1_g)
  
-View(c1_enr)
+
+
 
 
 
