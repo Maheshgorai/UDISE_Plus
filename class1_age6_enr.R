@@ -3,7 +3,7 @@ library(readr)
 library(tidyr)
 library(writexl)
 
-State <- read_csv("D:/Users/Downloads/profile_data_1_All State_2024-25 (1)/100_prof1.csv")
+State <- read_csv("D:/*****/*****/profile_data_1_All State_2024-25 (1)/100_prof1.csv")
 Students <- read_csv("D:/Users/Downloads/enrolment_data_2_All State_2024-25/100_enr2.csv")
 
 
@@ -84,4 +84,5 @@ c1_enr <- bind_rows(enr_ind,enr_state)%>%
   select(state,school_category_label,total_sch,total_c1,total_c1_b,total_c1_g)
  
 View(c1_enr)
+
 
