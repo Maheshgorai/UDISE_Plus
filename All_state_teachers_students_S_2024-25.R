@@ -36,7 +36,6 @@ State_Students_Teachers_S <- State_Students_Teachers_S %>%
 
 No_enrolment_S <- State_Students_Teachers_S %>%
   filter(students_s == 0) 
-#View(No_enrolment_S)
 
 No_enrolment_S <- No_enrolment_S %>%
   group_by(state) %>%
@@ -47,6 +46,7 @@ View(No_enrolment_S)
 
 No_enrolment <- No_enrolment %>%
   arrange(desc(Total_Schools))
+
 
 
 
