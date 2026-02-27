@@ -2,7 +2,7 @@ library(dplyr)
 library(readr)
 
 State_S <- read_csv("D:/*****/******/profile_data_1_All State_2024-25 (1)/100_prof1.csv")
-Students_S <- read_csv("D:/Users/Downloads/enrolment_data_2_All State_2024-25/100_enr2.csv")
+Students_S <- read_csv("D:/*****/*****/enrolment_data_2_All State_2024-25/100_enr2.csv")
 Teachers_S <- read_csv("D:/Users/Downloads/teacher_data_All State_2024-25 (1)/100_tch.csv")
 
 State_S <- State_S %>%
@@ -49,6 +49,7 @@ View(No_enrolment_S)
 
 No_enrolment <- No_enrolment %>%
   arrange(desc(Total_Schools))
+
 
 
 
