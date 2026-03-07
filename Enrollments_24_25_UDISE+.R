@@ -1953,8 +1953,6 @@ overall_c12_final <- bind_rows(overall_c12_india, overall_summary_by_state_c12) 
     school_category_label
   )
 
-View(overall_c12_final)
-
 # CLASS ========================================================================
 
 
@@ -1992,6 +1990,7 @@ Combined_class12 <- list(
   "Combined_class12_Pri_Unaided" = private_unaided_c12_final,
   "Combined_class12_Overall" = overall_c12_final
 )
+
 
 
 
